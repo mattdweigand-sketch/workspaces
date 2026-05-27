@@ -1,0 +1,20 @@
+# Local workspace state
+workspaces/
+_shared-config/setup-session.json
+_shared-config/setup-progress.md
+
+# Local environment
+.env
+.env.*
+!.env.example
+.claude/
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Logs and temp files
+*.log
+tmp/
+temp/

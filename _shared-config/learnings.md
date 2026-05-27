@@ -9,12 +9,14 @@ shape-specific lessons under that shape. Put cross-shape lessons under `## Gener
 
 ## setup
 
-## gated-decision-pipeline
+## messy-input-intake
 
-## recurring-operations-queue
+## evidence-review
 
-## recurring-document-production
+## decision-prep
 
-## learning-loop
+## exception-handling
 
-## build-from-scratch
+## stakeholder-response-prep
+
+## institutional-memory-loop
