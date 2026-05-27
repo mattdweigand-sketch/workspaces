@@ -53,7 +53,7 @@ Generated outputs:
 | Unsupported claims are blocked or assigned to a human owner. | Pass |
 | Artifact review report has an overall status. | Pass |
 | Open confirmations are captured in `_config/before-you-trust-this.md`. | Pass |
-| No platform-native action is delegated to Kit. | Pass |
+| No platform-native action is delegated to Workspces. | Pass |
 
 ## Findings
 

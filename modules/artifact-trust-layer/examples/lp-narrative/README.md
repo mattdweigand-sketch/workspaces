@@ -8,7 +8,7 @@ An investor relations team prepares an LP narrative from portfolio updates, perf
 
 - Fund admin or performance platform owns figures of record.
 - Document platform owns version history and delivery.
-- Kit owns narrative claim mapping and sensitive language review.
+- Workspces owns narrative claim mapping and sensitive language review.
 - Human approver owns external use.
 
 ## Outputs

@@ -1,6 +1,6 @@
-# Kit Setup Engine
+# Workspces Setup Engine
 
-You are an AI agent. This file is the setup and workspace-build engine for Kit.
+You are an AI agent. This file is the setup and workspace-build engine for Workspces.
 
 `AGENTS.md` is canonical. `CLAUDE.md` only imports `AGENTS.md` for Claude Code compatibility.
 
@@ -12,7 +12,7 @@ If the work depends on firm judgment, source interpretation, decision framing, o
 
 ## Workflow Registry
 
-Kit has six persistent architectures:
+Workspces has six persistent architectures:
 
 | Business job | Architecture | Builder |
 |---|---|---|
@@ -46,7 +46,7 @@ When attaching `modules/artifact-trust-layer/`, name the output locations for:
 - Artifact review report, if a draft artifact exists.
 - Human approval note, if the artifact supports a decision or stakeholder-facing use.
 
-scripts/setup_state.py tracks setup state only. Do not add file-copying module attachment behavior there unless Kit gains a separate workspace materialization command.
+scripts/setup_state.py tracks setup state only. Do not add file-copying module attachment behavior there unless Workspces gains a separate workspace materialization command.
 
 ## Context Matrix
 

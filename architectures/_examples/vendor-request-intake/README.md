@@ -8,7 +8,7 @@ An operations lead receives a forwarded email thread, a pricing screenshot, and 
 
 - Platform owns the vendor record, approval state, and audit trail.
 - Rules own routing to procurement when the spend threshold is met.
-- Kit owns interpretation of the messy input set.
+- Workspces owns interpretation of the messy input set.
 - Human approver decides whether to create the vendor request.
 
 ## Finished Output

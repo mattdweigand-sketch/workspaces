@@ -30,7 +30,7 @@ Platforms own records, permissions, version history, delivery, audit, and figure
 
 Deterministic tools own calculations, tie-outs, workbook inspection, duplicate hashes, and exact checks.
 
-Kit owns source interpretation, claim mapping, review framing, and issue visibility.
+Workspces owns source interpretation, claim mapping, review framing, and issue visibility.
 
 Humans own approval.
 

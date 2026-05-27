@@ -9,7 +9,7 @@ A team receives a CIM, management call notes, a customer export, a prior model, 
 - Document platform owns storage, permissions, version history, and audit.
 - Data warehouse or fund platform owns figures of record.
 - Deterministic tools own duplicate checks and workbook inspection.
-- Kit owns source authority, claim support, conflict visibility, and review framing.
+- Workspces owns source authority, claim support, conflict visibility, and review framing.
 - Human owner resolves conflicts and approves claims.
 
 ## Outputs

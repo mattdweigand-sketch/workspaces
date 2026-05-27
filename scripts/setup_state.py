@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small setup state helper for Kit."""
+"""Small setup state helper for Workspces."""
 
 import argparse
 import json
@@ -80,7 +80,7 @@ def has_profile_placeholders():
 
 def is_bootstrap_agents():
     text = read_text(AGENTS)
-    return "# Kit" in text and "What this project is" in text and "Run setup" in text
+    return "# Workspces" in text and "What this project is" in text and "Run setup" in text
 
 
 def session_has_orientation(session):
@@ -296,7 +296,7 @@ def command_clear_session(args):
 
 
 def build_parser():
-    parser = argparse.ArgumentParser(description="Kit setup state helper")
+    parser = argparse.ArgumentParser(description="Workspces setup state helper")
     sub = parser.add_subparsers(dest="command", required=True)
 
     for name in ("status", "doctor"):

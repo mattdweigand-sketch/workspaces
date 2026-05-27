@@ -8,7 +8,7 @@ A team reviews an analysis workbook before its outputs are used in a deck or mem
 
 - Excel or deterministic tools own formula checks.
 - Source systems own raw data and figures of record.
-- Kit owns workbook risk framing and review notes.
+- Workspces owns workbook risk framing and review notes.
 - Human owner approves use of the workbook output.
 
 ## Outputs

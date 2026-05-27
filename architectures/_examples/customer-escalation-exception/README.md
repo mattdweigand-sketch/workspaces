@@ -8,7 +8,7 @@ A customer asks for a support commitment outside the normal SLA. The workspace f
 
 - Support platform owns the ticket, SLA clock, owner, and audit trail.
 - SLA policy owns standard routing.
-- Kit owns exception reasoning.
+- Workspces owns exception reasoning.
 - Support leader approves any non-standard commitment.
 
 ## Finished Output

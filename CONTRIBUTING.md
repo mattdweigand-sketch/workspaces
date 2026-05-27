@@ -1,6 +1,6 @@
 # Contributing
 
-Kit is a plain-file toolkit. Contributions should make the operating model clearer, safer, or easier to adapt.
+Workspces is a plain-file toolkit. Contributions should make the operating model clearer, safer, or easier to adapt.
 
 ## Good Contributions
 
@@ -12,10 +12,10 @@ Kit is a plain-file toolkit. Contributions should make the operating model clear
 
 ## What To Avoid
 
-- Turning Kit into a runnable SaaS product.
+- Turning Workspces into a runnable SaaS product.
 - Adding platform-specific integrations by default.
 - Adding broad prompt libraries that are not tied to an architecture.
-- Moving records, calculations, permissions, or audit trails into Kit.
+- Moving records, calculations, permissions, or audit trails into Workspces.
 - Removing human approval from external or decision-facing work.
 
 ## Local Review

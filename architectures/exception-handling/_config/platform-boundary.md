@@ -9,7 +9,7 @@
 - Escalation log.
 - Audit trail.
 
-## Kit Owns
+## Workspces Owns
 
 - Exception brief.
 - Rule context.

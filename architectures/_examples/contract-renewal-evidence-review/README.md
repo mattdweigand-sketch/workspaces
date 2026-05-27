@@ -8,7 +8,7 @@ A team has a renewal proposal, prior contract, usage report, and customer email.
 
 - Document platform owns storage, permissions, version history, and audit.
 - Deterministic tools can check exact duplicates.
-- Kit owns authority ranking, conflict visibility, and evidence support mapping.
+- Workspces owns authority ranking, conflict visibility, and evidence support mapping.
 - Human owner resolves conflicts.
 
 ## Finished Output

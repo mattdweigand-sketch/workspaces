@@ -8,7 +8,7 @@
 - Audit trail.
 - System-of-record facts.
 
-## Kit Owns
+## Workspces Owns
 
 - Source authority interpretation.
 - Conflict and gap visibility.

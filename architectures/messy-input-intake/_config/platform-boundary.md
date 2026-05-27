@@ -8,7 +8,7 @@
 - Audit trail.
 - Delivery to external systems.
 
-## Kit Owns
+## Workspces Owns
 
 - Input interpretation.
 - Fact and assumption separation.

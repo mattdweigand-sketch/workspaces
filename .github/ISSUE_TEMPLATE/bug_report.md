@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report something unclear, broken, or unsafe in Kit
+about: Report something unclear, broken, or unsafe in Workspces
 title: "[Bug]: "
 labels: bug
 assignees: ""

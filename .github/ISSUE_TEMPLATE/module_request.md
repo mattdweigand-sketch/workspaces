@@ -8,7 +8,7 @@ assignees: ""
 
 ## Pattern
 
-What reusable pattern should Kit support?
+What reusable pattern should Workspces support?
 
 ## Architecture Fit
 

@@ -1,6 +1,6 @@
 # Security Policy
 
-Kit is a plain-file toolkit. It has no hosted service, database, authentication layer, or telemetry.
+Workspces is a plain-file toolkit. It has no hosted service, database, authentication layer, or telemetry.
 
 ## Supported Version
 
@@ -8,9 +8,9 @@ Security updates apply to the current `main` branch.
 
 ## Data Handling
 
-Kit does not upload data by itself. The AI agent or model provider you use may receive any files the agent reads.
+Workspces does not upload data by itself. The AI agent or model provider you use may receive any files the agent reads.
 
-Before using Kit with sensitive data:
+Before using Workspces with sensitive data:
 
 - follow your organization's data policy
 - use approved AI tooling

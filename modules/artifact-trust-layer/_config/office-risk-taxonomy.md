@@ -21,4 +21,4 @@ Use these risk types when reviewing decks, workbooks, documents, tables, charts,
 
 ## Boundary
 
-Kit names the risk and routes ownership. Platforms, deterministic tools, and humans resolve the underlying source, calculation, or approval question.
+Workspces names the risk and routes ownership. Platforms, deterministic tools, and humans resolve the underlying source, calculation, or approval question.

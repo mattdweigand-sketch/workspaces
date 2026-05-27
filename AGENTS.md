@@ -1,8 +1,8 @@
-# Kit
+# Workspces
 
 `AGENTS.md` is canonical. Claude Code reads it through the thin `CLAUDE.md` wrapper.
 
-Kit is a plain-file toolkit for building AI operating systems around the work platforms cannot own:
+Workspces is a plain-file toolkit for building AI operating systems around the work platforms cannot own:
 firm judgment, source interpretation, decision framing, exception handling, stakeholder response
 prep, and institutional memory.
 
@@ -16,7 +16,7 @@ prep, and institutional memory.
 
 ## Architecture Families
 
-Kit has six persistent architecture families:
+Workspces has six persistent architecture families:
 
 - `messy-input-intake`
 - `evidence-review`

@@ -1,6 +1,6 @@
 # Support
 
-Kit is maintained as a public toolkit.
+Workspces is maintained as a public toolkit.
 
 ## Questions
 

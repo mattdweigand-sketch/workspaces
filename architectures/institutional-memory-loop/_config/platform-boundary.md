@@ -8,7 +8,7 @@
 - Source records.
 - Permissions.
 
-## Kit Owns
+## Workspces Owns
 
 - Interpretation.
 - Causal hypothesis.
