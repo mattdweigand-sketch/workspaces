@@ -1,0 +1,41 @@
+name: Feature request
+description: Suggest an improvement to Workspaces.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Request
+      description: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: What workflow or team problem does this help?
+    validations:
+      required: true
+  - type: dropdown
+    id: fit
+    attributes:
+      label: Best fit
+      options:
+        - messy-input-intake
+        - evidence-review
+        - decision-prep
+        - exception-handling
+        - stakeholder-response-prep
+        - institutional-memory-loop
+        - artifact-trust-layer
+        - not sure
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Boundary check
+      options:
+        - label: This does not ask Workspaces to replace a system of record, calculation engine, permission system, delivery tool, or audit trail.
+          required: true

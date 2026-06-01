@@ -1,20 +1,43 @@
-# Local workspace state
-workspaces/
-_shared-config/setup-session.json
-_shared-config/setup-progress.md
+# macOS
+.DS_Store
+**/.DS_Store
+._*
+**/._*
+
+# Local Claude Code settings
+.claude/settings.local.json
+.claude/settings.json
 
 # Local environment
 .env
 .env.*
 !.env.example
-.claude/
 
-# OS and editor files
-.DS_Store
-.idea/
-.vscode/
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
 
-# Logs and temp files
-*.log
+# Setup state runtime files
+_shared-config/setup-session.json
+_shared-config/setup-session.lock
+_shared-config/setup-progress.md
+
+# Generated local workspaces
+workspaces/*
+!workspaces/.gitkeep
+
+# Local setup testing clone and scratch output
+_sandbox/
 tmp/
 temp/
+*.tmp
+*.log
+
+# Editor files
+.idea/
+.vscode/

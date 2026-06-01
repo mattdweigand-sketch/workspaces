@@ -13,7 +13,18 @@ SHARED = ROOT / "_shared-config"
 SESSION = SHARED / "setup-session.json"
 PROGRESS = SHARED / "setup-progress.md"
 AGENTS = ROOT / "AGENTS.md"
-SETUP = ROOT / "SETUP.md"
+
+
+def toolkit_dir():
+    if (ROOT / "SETUP.md").is_file():
+        return ROOT
+    if (ROOT / "_kit" / "SETUP.md").is_file():
+        return ROOT / "_kit"
+    return ROOT
+
+
+TOOLKIT = toolkit_dir()
+SETUP = TOOLKIT / "SETUP.md"
 
 
 SESSION_TEMPLATE = {
@@ -145,7 +156,7 @@ def parse_registry_rows():
 def constraint_numbers_from_setup():
     text = read_text(SETUP)
     nums = set(re.findall(r"(?:^|[\s+(])([0-9]{2}) \(", text, flags=re.M))
-    nums.update(re.findall(r"\b([0-9]{2})-", "\n".join(p.name for p in (ROOT / "constraints").glob("*.md"))))
+    nums.update(re.findall(r"\b([0-9]{2})-", "\n".join(p.name for p in (TOOLKIT / "constraints").glob("*.md"))))
     return sorted(nums)
 
 
@@ -155,11 +166,11 @@ def registry_report():
     for row in rows:
         arch = row["architecture"]
         builder = row["builder"]
-        if arch != "none" and not (ROOT / "architectures" / arch).exists():
+        if arch != "none" and not (TOOLKIT / "architectures" / arch).exists():
             missing.append({"business_job": row["business_job"], "missing": "architecture", "value": arch})
-        if builder and not (ROOT / builder).exists():
+        if builder and not (TOOLKIT / builder).exists():
             missing.append({"business_job": row["business_job"], "missing": "builder", "value": builder})
-    constraint_files = sorted(p.name for p in (ROOT / "constraints").glob("*.md"))
+    constraint_files = sorted(p.name for p in (TOOLKIT / "constraints").glob("*.md"))
     return {
         "registry_rows": len(rows),
         "architecture_rows": sum(1 for row in rows if row.get("architecture")),
