@@ -8,7 +8,7 @@
 - Delivery.
 - Audit trail.
 
-## Workspces Owns
+## Workspaces Owns
 
 - Narrative framing.
 - Likely questions.

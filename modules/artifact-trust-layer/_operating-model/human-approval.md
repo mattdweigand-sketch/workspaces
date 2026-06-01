@@ -2,7 +2,7 @@
 
 Artifact Trust Layer review ends with a human decision.
 
-Workspces can make evidence, assumptions, source freshness, formula risk, and unresolved issues visible. It cannot approve the artifact for external use or decision use.
+Workspaces can make evidence, assumptions, source freshness, formula risk, and unresolved issues visible. It cannot approve the artifact for external use or decision use.
 
 ## Approval States
 

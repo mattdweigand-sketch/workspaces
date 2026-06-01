@@ -45,4 +45,4 @@ Use this for workbooks that support a deck, memo, decision, diligence review, or
 
 ## Boundary
 
-Workspces can flag workbook risks. It does not certify formulas or become the calculation owner.
+Workspaces can flag workbook risks. It does not certify formulas or become the calculation owner.

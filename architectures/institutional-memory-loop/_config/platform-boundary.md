@@ -8,7 +8,7 @@
 - Source records.
 - Permissions.
 
-## Workspces Owns
+## Workspaces Owns
 
 - Interpretation.
 - Causal hypothesis.

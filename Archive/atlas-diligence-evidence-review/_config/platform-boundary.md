@@ -8,7 +8,7 @@
 - Audit trail.
 - System-of-record facts.
 
-## Workspces Owns
+## Workspaces Owns
 
 - Source authority interpretation.
 - Conflict and gap visibility.

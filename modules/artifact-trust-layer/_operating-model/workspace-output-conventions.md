@@ -21,7 +21,7 @@ deliverables/[project-name]/
   07-final-deliverable/
 ```
 
-This pattern does not replace Workspces architectures. It is a workspace output convention for artifacts that need a clean audit trail.
+This pattern does not replace Workspaces architectures. It is a workspace output convention for artifacts that need a clean audit trail.
 
 ## Default Output Paths
 

@@ -8,7 +8,7 @@
 - Audit trail.
 - Delivery to external systems.
 
-## Workspces Owns
+## Workspaces Owns
 
 - Input interpretation.
 - Fact and assumption separation.

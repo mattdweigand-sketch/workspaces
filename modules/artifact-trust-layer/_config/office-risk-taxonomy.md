@@ -21,4 +21,4 @@ Use these risk types when reviewing decks, workbooks, documents, tables, charts,
 
 ## Boundary
 
-Workspces names the risk and routes ownership. Platforms, deterministic tools, and humans resolve the underlying source, calculation, or approval question.
+Workspaces names the risk and routes ownership. Platforms, deterministic tools, and humans resolve the underlying source, calculation, or approval question.

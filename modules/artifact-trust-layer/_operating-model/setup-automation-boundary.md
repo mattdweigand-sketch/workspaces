@@ -15,7 +15,7 @@ Do not add module copying to `scripts/setup_state.py`. That script is a state he
 
 ## Automate Later If
 
-Add programmatic attachment only if Workspces gains a command that creates or updates workspace files from architecture and module selections.
+Add programmatic attachment only if Workspaces gains a command that creates or updates workspace files from architecture and module selections.
 
 That future command should:
 

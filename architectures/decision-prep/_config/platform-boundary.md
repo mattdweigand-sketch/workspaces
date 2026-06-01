@@ -7,7 +7,7 @@
 - Audit trail.
 - Figures and calculations.
 
-## Workspces Owns
+## Workspaces Owns
 
 - Decision framing.
 - Options and tradeoff analysis.

@@ -30,7 +30,7 @@ Platforms own records, permissions, version history, delivery, audit, and figure
 
 Deterministic tools own calculations, tie-outs, workbook inspection, duplicate hashes, and exact checks.
 
-Workspces owns source interpretation, claim mapping, review framing, and issue visibility.
+Workspaces owns source interpretation, claim mapping, review framing, and issue visibility.
 
 Humans own approval.
 

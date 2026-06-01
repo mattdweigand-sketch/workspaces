@@ -1,8 +1,8 @@
-# Workspces
+# Workspaces
 
 `AGENTS.md` is canonical. Claude Code reads it through the thin `CLAUDE.md` wrapper.
 
-Workspces is a plain-file toolkit for building AI operating systems around the work platforms cannot own:
+Workspaces is a plain-file toolkit for building AI operating systems around the work platforms cannot own:
 firm judgment, source interpretation, decision framing, exception handling, stakeholder response
 prep, and institutional memory.
 
@@ -16,7 +16,7 @@ prep, and institutional memory.
 
 ## Architecture Families
 
-Workspces has six persistent architecture families:
+Workspaces has six persistent architecture families:
 
 - `messy-input-intake`
 - `evidence-review`

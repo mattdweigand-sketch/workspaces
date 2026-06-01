@@ -1,6 +1,6 @@
-# Workspces
+# Workspaces
 
-Workspces is a plain-file toolkit for building AI operating systems around the work platforms cannot own:
+Workspaces is a plain-file toolkit for building AI operating systems around the work platforms cannot own:
 
 - messy input intake
 - source interpretation
@@ -9,11 +9,11 @@ Workspces is a plain-file toolkit for building AI operating systems around the w
 - stakeholder response prep
 - institutional memory
 
-Your CRM, ticketing system, project tracker, finance platform, document system, dashboard, and audit trail stay the source of truth. Workspces builds the judgment layer above them.
+Your CRM, ticketing system, project tracker, finance platform, document system, dashboard, and audit trail stay the source of truth. Workspaces builds the judgment layer above them.
 
 ## Who This Is For
 
-Workspces is for teams that want AI to help with recurring knowledge work without turning the model into a system of record.
+Workspaces is for teams that want AI to help with recurring knowledge work without turning the model into a system of record.
 
 Use it when the work depends on judgment, context, source interpretation, or human approval.
 
@@ -39,7 +39,7 @@ Use this rule before building anything:
 |---|---|
 | Platforms | Facts, records, status, permissions, calculations, delivery, audit |
 | Automation | Known rules, routing, checklists, templates, repeatable handoffs |
-| Workspces | Interpretation, judgment, exceptions, decision prep, response framing, memory |
+| Workspaces | Interpretation, judgment, exceptions, decision prep, response framing, memory |
 | Humans | Approval, accountability, external sends, irreversible actions |
 
 Every workspace should answer:
@@ -71,7 +71,7 @@ Modules are optional patterns that attach to an architecture. They do not create
 
 ## Artifact Trust Layer
 
-The Artifact Trust Layer is the Workspces reusable pattern for making polished artifacts inspectable.
+The Artifact Trust Layer is the Workspaces reusable pattern for making polished artifacts inspectable.
 
 It gives a workspace:
 
@@ -91,7 +91,7 @@ The rule is simple:
 Truth layer first. Artifact second.
 ```
 
-Workspces can make evidence, assumptions, freshness, formula risk, and unresolved issues visible. It does not certify an artifact or replace human approval.
+Workspaces can make evidence, assumptions, freshness, formula risk, and unresolved issues visible. It does not certify an artifact or replace human approval.
 
 ## Repository Map
 
@@ -130,11 +130,11 @@ Setup asks one question at a time, writes the answers into plain markdown files,
 
 ## Data And Security
 
-Workspces does not upload data on its own. It is a folder of plain files.
+Workspaces does not upload data on its own. It is a folder of plain files.
 
 Your AI tool may send the files it reads to its model provider. Follow your organization's data policy, and use an enterprise or zero-retention plan when your data requires it.
 
-Workspces should not write to external systems or send stakeholder-facing output without human review.
+Workspaces should not write to external systems or send stakeholder-facing output without human review.
 
 ## Useful References
 
@@ -149,6 +149,6 @@ Those explain what belongs to AI, what belongs to platforms or deterministic aut
 
 ## License
 
-Workspces is released under the [MIT License](LICENSE).
+Workspaces is released under the [MIT License](LICENSE).
 
 Built by Matt Weigand.

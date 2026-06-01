@@ -8,7 +8,7 @@ A team needs to explain a service issue to a customer using verified incident fa
 
 - Incident platform owns timeline, status, and audit.
 - Account system owns stakeholder record and delivery.
-- Workspces owns message framing and likely questions.
+- Workspaces owns message framing and likely questions.
 - Human owner approves and sends.
 
 ## Finished Output

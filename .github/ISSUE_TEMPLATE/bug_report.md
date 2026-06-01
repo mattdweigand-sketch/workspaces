@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report something unclear, broken, or unsafe in Workspces
+about: Report something unclear, broken, or unsafe in Workspaces
 title: "[Bug]: "
 labels: bug
 assignees: ""

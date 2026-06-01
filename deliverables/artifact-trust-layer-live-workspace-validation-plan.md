@@ -4,7 +4,7 @@ Date: 2026-05-27
 
 ## Purpose
 
-Validate that a real workspace can use the Artifact Trust Layer without changing the six-architecture Workspces model.
+Validate that a real workspace can use the Artifact Trust Layer without changing the six-architecture Workspaces model.
 
 ## Recommended Test
 
@@ -72,7 +72,7 @@ The live workspace test passes when:
 - Unsupported claims are blocked or assigned to a human owner.
 - The artifact review report has an overall status.
 - Open confirmations are captured in `_config/before-you-trust-this.md`.
-- No platform-native action is delegated to Workspces.
+- No platform-native action is delegated to Workspaces.
 
 ## Fail Conditions
 
@@ -87,4 +87,4 @@ The test fails if:
 
 ## Follow-On Decision
 
-If this test passes, the next question is whether Workspces needs programmatic workspace generation for module attachment. The current setup script only tracks setup state. Do not add copying behavior to `scripts/setup_state.py` unless the setup engine becomes responsible for workspace materialization.
+If this test passes, the next question is whether Workspaces needs programmatic workspace generation for module attachment. The current setup script only tracks setup state. Do not add copying behavior to `scripts/setup_state.py` unless the setup engine becomes responsible for workspace materialization.

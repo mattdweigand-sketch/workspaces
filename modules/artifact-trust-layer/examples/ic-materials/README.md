@@ -9,7 +9,7 @@ A deal team prepares investment committee materials from diligence findings, a f
 - Approval workflow owns the decision record.
 - Finance or data platform owns figures of record.
 - Excel or deterministic tools own model checks.
-- Workspces owns claim mapping, assumption visibility, and hostile review.
+- Workspaces owns claim mapping, assumption visibility, and hostile review.
 - IC approver owns the decision.
 
 ## Outputs

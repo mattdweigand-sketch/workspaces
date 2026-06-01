@@ -20,7 +20,7 @@
 - Hidden sheet or range inspection.
 - Data freshness checks when the source system exposes dates.
 
-## Workspces Owns
+## Workspaces Owns
 
 - Source authority interpretation.
 - Claim and evidence mapping.
@@ -39,4 +39,4 @@
 
 ## Hard Rule
 
-If the artifact depends on a figure of record, Workspces identifies the source and flags the risk. It does not become the source of truth for the figure.
+If the artifact depends on a figure of record, Workspaces identifies the source and flags the risk. It does not become the source of truth for the figure.

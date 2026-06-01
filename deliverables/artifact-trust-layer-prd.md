@@ -2,15 +2,15 @@
 
 ## Decision
 
-Build an `artifact-trust-layer` module for Workspces.
+Build an `artifact-trust-layer` module for Workspaces.
 
 Do not create a seventh architecture. Do not build runnable sales-harness software in this repo. The module should package reusable workflows, templates, prompts, review gates, and operating-model guidance for teams that turn messy source material into trustworthy artifacts.
 
-The sales harness can enforce artifact trust behavior in code. Workspces should make the same discipline portable as files a human or agent can apply across workflows.
+The sales harness can enforce artifact trust behavior in code. Workspaces should make the same discipline portable as files a human or agent can apply across workflows.
 
 ## Product Summary
 
-The Artifact Trust Layer is a reusable Workspces module for producing and reviewing PowerPoint decks, Excel workbooks, Word documents, IC materials, LP narratives, board materials, diligence evidence maps, and one-off deliverables from messy source sets.
+The Artifact Trust Layer is a reusable Workspaces module for producing and reviewing PowerPoint decks, Excel workbooks, Word documents, IC materials, LP narratives, board materials, diligence evidence maps, and one-off deliverables from messy source sets.
 
 It gives teams a repeatable pattern:
 
@@ -20,7 +20,7 @@ It gives teams a repeatable pattern:
 4. Run hostile review.
 5. Route unresolved issues to a human approver.
 
-The module plugs into existing Workspces architectures:
+The module plugs into existing Workspaces architectures:
 
 | Architecture | Artifact Trust Layer Role |
 |---|---|
@@ -49,11 +49,11 @@ Common failures:
 
 These are not primarily drafting failures. They are source, evidence, and review failures.
 
-## Why Workspces Should Own This
+## Why Workspaces Should Own This
 
-Workspces owns the judgment layer above platforms. It does not own the source of record, calculation engine, permissions, version history, delivery, or audit trail.
+Workspaces owns the judgment layer above platforms. It does not own the source of record, calculation engine, permissions, version history, delivery, or audit trail.
 
-The Artifact Trust Layer belongs in Workspces because the hard work is not creating a file. The hard work is knowing what the source set supports, what the artifact claims, where the risks are, and what a human must approve before the artifact is trusted.
+The Artifact Trust Layer belongs in Workspaces because the hard work is not creating a file. The hard work is knowing what the source set supports, what the artifact claims, where the risks are, and what a human must approve before the artifact is trusted.
 
 The module must preserve the platform boundary:
 
@@ -61,7 +61,7 @@ The module must preserve the platform boundary:
 |---|---|
 | Source files, permissions, version history, delivery, audit | Document platform, CRM, fund admin platform, data warehouse, SharePoint, Google Drive, Box, or other source system |
 | Calculations, tie-outs, duplicate hashes, workbook inspection | Deterministic tools, Excel, scripts, data warehouse, source platform |
-| Source interpretation, claim mapping, review framing, issue classification | Workspces |
+| Source interpretation, claim mapping, review framing, issue classification | Workspaces |
 | Approval, external use, final judgment | Human owner |
 
 ## Goals
@@ -71,8 +71,8 @@ The module must preserve the platform boundary:
 - Make every load-bearing claim traceable to evidence.
 - Make unsupported claims, stale numbers, formula risks, and inferred facts visible.
 - Give PowerPoint, Excel, and Word artifacts artifact-specific review controls.
-- Keep the six Workspces architectures intact.
-- Make the module easy to attach to existing and future Workspces workflows.
+- Keep the six Workspaces architectures intact.
+- Make the module easy to attach to existing and future Workspaces workflows.
 - Produce examples for LP narratives, IC materials, diligence evidence maps, and workbook review.
 
 ## Non-Goals
@@ -100,7 +100,7 @@ Needs a repeatable structure for source prep, evidence mapping, workbook control
 
 Needs a compact review packet showing what is supported, what is assumed, what is stale, and what needs approval. Cares about knowing where to focus review.
 
-### AI Agent Running Workspces
+### AI Agent Running Workspaces
 
 Needs stage contracts, templates, prompts, and examples that make the expected process explicit. Cares about knowing what to read, what to produce, and what not to decide.
 
@@ -355,7 +355,7 @@ Acceptance criteria:
 
 - The workbook can be reviewed as a controlled artifact.
 - The template makes formula risk and stale data visible.
-- The template does not turn Workspces into the calculation owner.
+- The template does not turn Workspaces into the calculation owner.
 
 ### FR7: Word Claim Map
 
@@ -535,7 +535,7 @@ Artifact-specific templates must cover the failure modes unique to decks, workbo
 
 ### NFR5: Human Approval
 
-Every review flow must end with a human approval note. Workspces may classify issues. It must not approve external or decision-facing use.
+Every review flow must end with a human approval note. Workspaces may classify issues. It must not approve external or decision-facing use.
 
 ### NFR6: Platform Boundary
 
@@ -543,7 +543,7 @@ Every file must preserve the boundary:
 
 - Platforms own records and audit.
 - Deterministic tools own exact calculations and checks.
-- Workspces owns interpretation and review framing.
+- Workspaces owns interpretation and review framing.
 - Humans own approval.
 
 ## Review Severity Model
@@ -606,7 +606,7 @@ Update `architectures/stakeholder-response-prep/CONTEXT.md`:
 
 ## Shipped Scope
 
-The module has been deployed as a plain-file Workspces module.
+The module has been deployed as a plain-file Workspaces module.
 
 Shipped files include:
 
@@ -657,13 +657,13 @@ Completed checks:
 Future work may include:
 
 - A live workspace build using `evidence-review` plus Artifact Trust Layer.
-- Programmatic setup support if Workspces gains a workspace generation script beyond state tracking.
+- Programmatic setup support if Workspaces gains a workspace generation script beyond state tracking.
 - A companion sales-harness implementation that enforces source packets, evidence maps, artifact gates, tests, and workbook checks in code.
 - A deterministic workbook inspection script in another repo.
 - A deck generation system in another repo.
 - A source packet JSON schema for systems that want to enforce the pattern.
 
-These are explicitly outside this Workspces module unless the repo scope changes.
+These are explicitly outside this Workspaces module unless the repo scope changes.
 
 ## Implemented Plan
 
@@ -785,15 +785,15 @@ Mitigation: Keep the core sequence fixed. Source packet, claim map, artifact spe
 
 ### Risk: Users treat review prompts as certification.
 
-Mitigation: Every review file must state that Workspces flags issues but does not approve the artifact.
+Mitigation: Every review file must state that Workspaces flags issues but does not approve the artifact.
 
-### Risk: Workbook controls imply Workspces owns calculations.
+### Risk: Workbook controls imply Workspaces owns calculations.
 
 Mitigation: The workbook template must route calculations, tie-outs, and exact checks to deterministic tools or Excel owners.
 
 ### Risk: The module duplicates sales-harness implementation work.
 
-Mitigation: Keep Workspces as markdown operating discipline. Leave enforcement, logs, tests, and gates to runnable repos.
+Mitigation: Keep Workspaces as markdown operating discipline. Leave enforcement, logs, tests, and gates to runnable repos.
 
 ### Risk: Setup becomes confusing.
 
@@ -801,7 +801,7 @@ Mitigation: Explain that architectures answer "what business job is this?" Modul
 
 ## Resolved Decisions
 
-1. Use generic private markets examples. Keep JSQ-specific language out of the public Workspces module unless this repo becomes JSQ-specific.
+1. Use generic private markets examples. Keep JSQ-specific language out of the public Workspaces module unless this repo becomes JSQ-specific.
 2. Include Word controls in the shipped module.
 3. Reference module files by default. Copy only when a workspace needs customization.
 4. Use both: issue severity as `low`, `medium`, `high`; overall artifact status as `pass`, `pass with warnings`, `blocked pending human review`.

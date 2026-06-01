@@ -23,7 +23,7 @@ That means:
 
 - Platforms own facts, state, permissions, calculations, delivery, and audit.
 - Automation owns known rules, routing, checklists, templates, and repeatable handoffs.
-- Workspces owns interpretation, judgment, exception reasoning, decision prep, communication framing, and memory.
+- Workspaces owns interpretation, judgment, exception reasoning, decision prep, communication framing, and memory.
 
 The six architectures below are the recurring places where that third layer appears across almost every business.
 
@@ -73,7 +73,7 @@ Purpose: turn messy inputs into a clean brief that can be reviewed, routed, or e
 Platform boundary:
 
 - Platform owns the final record and workflow state.
-- Workspces owns interpretation of messy inputs before the record is clean.
+- Workspaces owns interpretation of messy inputs before the record is clean.
 
 Folder shape:
 
@@ -114,7 +114,7 @@ Purpose: inspect a source set before the business relies on it.
 Platform boundary:
 
 - Document systems own storage, permissions, version history, and audit.
-- Workspces owns source interpretation: authority, support, conflicts, gaps, and questions.
+- Workspaces owns source interpretation: authority, support, conflicts, gaps, and questions.
 
 Folder shape:
 
@@ -155,7 +155,7 @@ Purpose: prepare a human to make a better decision.
 Platform boundary:
 
 - Platform owns the record, approval state, and decision log.
-- Workspces owns decision framing, tradeoffs, assumptions, risks, precedent, and conditions.
+- Workspaces owns decision framing, tradeoffs, assumptions, risks, precedent, and conditions.
 
 Folder shape:
 
@@ -196,7 +196,7 @@ Purpose: handle cases that do not fit the normal workflow.
 Platform boundary:
 
 - Platform owns queues, statuses, ownership, entitlement, and escalation logs.
-- Workspces owns interpreting the exception, applying judgment, drafting options, and preparing handoff.
+- Workspaces owns interpreting the exception, applying judgment, drafting options, and preparing handoff.
 
 Folder shape:
 
@@ -237,7 +237,7 @@ Purpose: prepare high-context communication from verified facts.
 Platform boundary:
 
 - Platform owns stakeholder records, permissions, figures, delivery, and audit.
-- Workspces owns narrative, tone, likely questions, response posture, and review packet.
+- Workspaces owns narrative, tone, likely questions, response posture, and review packet.
 
 Folder shape:
 
@@ -278,7 +278,7 @@ Purpose: capture validated lessons and apply them to future work.
 Platform boundary:
 
 - Source systems own what happened.
-- Workspces owns interpretation, causal analysis, validation, pattern capture, and reuse.
+- Workspaces owns interpretation, causal analysis, validation, pattern capture, and reuse.
 - A database can store the memory, but it cannot decide what the lesson means or when to apply it.
 
 Folder shape:
@@ -383,7 +383,7 @@ python3 scripts/setup_state.py doctor --json
 
 ### `AGENTS.md`
 
-Update the project-doc section so it says Workspces has six architecture families and keeps the platform boundary explicit.
+Update the project-doc section so it says Workspaces has six architecture families and keeps the platform boundary explicit.
 
 Keep:
 
@@ -546,4 +546,4 @@ Do not build:
 - Audit systems.
 - Standard document extraction as a standalone architecture.
 
-Those belong to platforms. Workspces exists above them.
+Those belong to platforms. Workspaces exists above them.

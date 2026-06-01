@@ -1,6 +1,6 @@
 # Support
 
-Workspces is maintained as a public toolkit.
+Workspaces is maintained as a public toolkit.
 
 ## Questions
 

@@ -1,6 +1,6 @@
 # Contributing
 
-Workspces is a plain-file toolkit. Contributions should make the operating model clearer, safer, or easier to adapt.
+Workspaces is a plain-file toolkit. Contributions should make the operating model clearer, safer, or easier to adapt.
 
 ## Good Contributions
 
@@ -12,10 +12,10 @@ Workspces is a plain-file toolkit. Contributions should make the operating model
 
 ## What To Avoid
 
-- Turning Workspces into a runnable SaaS product.
+- Turning Workspaces into a runnable SaaS product.
 - Adding platform-specific integrations by default.
 - Adding broad prompt libraries that are not tied to an architecture.
-- Moving records, calculations, permissions, or audit trails into Workspces.
+- Moving records, calculations, permissions, or audit trails into Workspaces.
 - Removing human approval from external or decision-facing work.
 
 ## Local Review

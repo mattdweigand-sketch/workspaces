@@ -9,7 +9,7 @@
 - Escalation log.
 - Audit trail.
 
-## Workspces Owns
+## Workspaces Owns
 
 - Exception brief.
 - Rule context.

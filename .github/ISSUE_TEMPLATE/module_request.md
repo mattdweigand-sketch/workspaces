@@ -8,7 +8,7 @@ assignees: ""
 
 ## Pattern
 
-What reusable pattern should Workspces support?
+What reusable pattern should Workspaces support?
 
 ## Architecture Fit
 

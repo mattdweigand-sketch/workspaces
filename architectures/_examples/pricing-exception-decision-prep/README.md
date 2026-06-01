@@ -8,7 +8,7 @@ A sales lead requests a non-standard discount. The workspace prepares the decisi
 
 - CRM owns the opportunity record and approval state.
 - Pricing model owns margin math.
-- Workspces owns decision framing and challenge.
+- Workspaces owns decision framing and challenge.
 - Revenue leader approves or rejects.
 
 ## Finished Output
