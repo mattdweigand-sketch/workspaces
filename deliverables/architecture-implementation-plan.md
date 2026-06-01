@@ -79,7 +79,7 @@ Folder shape:
 
 ```text
 architectures/messy-input-intake/
-  CLAUDE.md
+  AGENTS.md
   CONTEXT.md
   01_capture/CONTEXT.md
   02_interpret/CONTEXT.md
@@ -120,7 +120,7 @@ Folder shape:
 
 ```text
 architectures/evidence-review/
-  CLAUDE.md
+  AGENTS.md
   CONTEXT.md
   01_inventory/CONTEXT.md
   02_authority/CONTEXT.md
@@ -161,7 +161,7 @@ Folder shape:
 
 ```text
 architectures/decision-prep/
-  CLAUDE.md
+  AGENTS.md
   CONTEXT.md
   01_decision_frame/CONTEXT.md
   02_options_tradeoffs/CONTEXT.md
@@ -202,7 +202,7 @@ Folder shape:
 
 ```text
 architectures/exception-handling/
-  CLAUDE.md
+  AGENTS.md
   CONTEXT.md
   01_exception_brief/CONTEXT.md
   02_rule_context/CONTEXT.md
@@ -243,7 +243,7 @@ Folder shape:
 
 ```text
 architectures/stakeholder-response-prep/
-  CLAUDE.md
+  AGENTS.md
   CONTEXT.md
   01_verified_facts/CONTEXT.md
   02_message_frame/CONTEXT.md
@@ -285,7 +285,7 @@ Folder shape:
 
 ```text
 architectures/institutional-memory-loop/
-  CLAUDE.md
+  AGENTS.md
   CONTEXT.md
   01_event_capture/CONTEXT.md
   02_interpretation/CONTEXT.md
@@ -448,7 +448,7 @@ Done when: README makes sense to a business reader before they see folder names.
 ### Phase 2: Build architecture skeletons
 
 1. Create the six architecture folders.
-2. Add `CLAUDE.md`, `CONTEXT.md`, stage contracts, and required `_config` files.
+2. Add `AGENTS.md`, `CONTEXT.md`, stage contracts, and required `_config` files.
 3. Add empty output folders or `.gitkeep` where needed.
 4. Add `_store/` only to `institutional-memory-loop`.
 

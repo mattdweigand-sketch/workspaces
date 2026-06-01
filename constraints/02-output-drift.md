@@ -31,8 +31,8 @@ There is a body of research on instruction clarity in education that applies dir
 
 Drift prevention is less about specific skills and more about how you structure the interaction. That said, there are tools that help.
 
-**Claude Projects (knowledge sources)**
-If you are working in Claude Projects, your knowledge sources persist across conversations. A well-written project instruction file that defines output standards, combined with a reference example in the knowledge sources, reduces drift significantly. The model reads the project instructions every time. If those instructions include a clear output specification, it anchors against that specification.
+**Project knowledge sources**
+If your AI environment supports persistent project knowledge, use it deliberately. A well-written project instruction file that defines output standards, combined with a reference example in the knowledge sources, reduces drift significantly. The model reads the project instructions every time. If those instructions include a clear output specification, it anchors against that specification.
 
 **Structured output formats**
 Most models support requesting output in specific formats: JSON, markdown with defined headers, tables with specific columns. Structural constraints reduce drift because the model has less freedom to infer structure. If your output must be a risk register with columns [Risk | Severity | Source | Mitigation], the model cannot drift into a narrative essay.

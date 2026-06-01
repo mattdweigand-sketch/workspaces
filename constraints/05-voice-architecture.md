@@ -34,8 +34,8 @@ Some general voice skills score tone on axes like formal/casual, direct/measured
 **blader/humanizer and forks** (see Constraint 01)
 Useful as a post-processing step, but they solve a different problem. The humanizer removes AI patterns. It does not add your voice. Use it after the voice system, not instead of it.
 
-**Claude's built-in style features**
-Claude.ai allows users to set communication style preferences. This is a lightweight voice layer. It works for casual use. For production work where voice consistency matters across dozens of outputs, file-based systems give you more control and auditability.
+**Built-in style features**
+Some AI tools let users set communication style preferences. This is a lightweight voice layer. It works for casual use. For production work where voice consistency matters across dozens of outputs, file-based systems give you more control and auditability.
 
 ---
 
@@ -127,5 +127,5 @@ List them. For each one, write a single sentence about what makes it structurall
 | Everything sounds the same regardless of format | You are missing a format patterns file. The model has no structural guidance, so it defaults to one structure for everything. |
 | Voice is close but has annoying patterns | Add those patterns to your constraints file as explicit prohibitions. |
 | Voice file exists but output still sounds generic | Your voice file probably describes the model's behavior instead of describing your patterns. Rewrite it as conditions and patterns, not instructions. |
-| Voice works in one session but not the next | The voice files are not persisting. Put them in Claude Project knowledge, or in files that load via CLAUDE.md. |
+| Voice works in one session but not the next | The voice files are not persisting. Put them in project knowledge, or in files that load via AGENTS.md. |
 | Different team members get different results | Share the three files. Voice consistency across people is the same problem as voice consistency across sessions. Same fix. |

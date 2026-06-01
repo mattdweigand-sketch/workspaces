@@ -27,33 +27,33 @@ The same principle applies to your AI workflow. If session 1 established that "t
 
 ## Layer 2: Existing Skills and Tools
 
-**Claude Projects (persistent knowledge)**
-Claude Projects maintain knowledge sources and a project instruction file across all conversations within the project. This is the simplest persistence mechanism available. Your constraints, reference material, and output standards live in the project. Every new conversation in that project starts with that context already loaded. If you are not using Projects for repeatable work, start.
+**Project knowledge sources**
+Many AI environments maintain knowledge sources and a project instruction file across all conversations within the project. This is the simplest persistence mechanism available. Your constraints, reference material, and output standards live in the project. Every new conversation in that project starts with that context already loaded. If you are not using project knowledge for repeatable work, start.
 
-**Claude Memory**
-Claude's built-in memory system stores information across conversations. You can tell Claude to remember specific decisions, preferences, or constraints. This works for personal preferences and recurring context. It is less precise than file-based persistence because you cannot control exactly what is stored or how it is retrieved, but it requires zero setup.
+**Model memory**
+Some model environments store information across conversations. You can ask the model to remember specific decisions, preferences, or constraints. This works for personal preferences and recurring context. It is less precise than file-based persistence because you cannot control exactly what is stored or how it is retrieved, but it requires zero setup.
 
 **mem0 MCP server** (github.com/mem0ai/mem0)
 A structured memory layer that stores facts, relationships, and context. More controllable than built-in memory. You can query it, update it, and scope it to specific projects. Useful for workflows where the context that needs to persist is complex or changes often.
 
 **Obsidian or Notion as a state store**
-If you work across multiple tools and models, a central note-taking system becomes your persistence layer. After each session, update your project notes. Before the next session, pull the relevant notes into your context. This is manual but platform-agnostic. It works with Claude, ChatGPT, Copilot, or any other model.
+If you work across multiple tools and models, a central note-taking system becomes your persistence layer. After each session, update your project notes. Before the next session, pull the relevant notes into your context. This is manual but platform-agnostic. It works with any model.
 
 ---
 
 ## Layer 3: The Architectural Fix
 
-In ICM, the workspace itself is the memory. The folder structure, the CLAUDE.md, the stage contracts, the reference files, and the output from previous runs all persist on disk between sessions. When a new session starts, the model reads CLAUDE.md and knows where it is, what exists, and where to find things. It does not need to remember the previous session. It reads the state from the filesystem.
+In ICM, the workspace itself is the memory. The folder structure, the AGENTS.md, the stage contracts, the reference files, and the output from previous runs all persist on disk between sessions. When a new session starts, the model reads AGENTS.md and knows where it is, what exists, and where to find things. It does not need to remember the previous session. It reads the state from the filesystem.
 
 This is the same principle that makes web applications work. A web server does not remember your previous visit. It reads your state from a database, a cookie, or a session store. The application appears to have continuity because the state is externalized, not because the server has memory.
 
 **What needs to persist between sessions:**
 
-1. **Decisions and constraints** (goes in L3 reference files or in the CLAUDE.md)
+1. **Decisions and constraints** (goes in L3 reference files or in the AGENTS.md)
 If session 1 established that the output should use short paragraphs and avoid headers, write that into your constraints file. It is now a permanent part of the workspace. Future sessions inherit it automatically.
 
 2. **The current state of work** (goes in L2 stage contract or a status file)
-Where are you in the workflow? Which stages are complete? What is the next step? A simple status section in your CONTEXT.md or CLAUDE.md keeps the model oriented. Something like:
+Where are you in the workflow? Which stages are complete? What is the next step? A simple status section in your CONTEXT.md or AGENTS.md keeps the model oriented. Something like:
 
 ```
 ## Current State
@@ -95,8 +95,8 @@ Persistence infrastructure is worth building for repeatable workflows. For a one
 
 | If this is your situation | Start here |
 |---|---|
-| Model "forgets" your preferences every session | Use Claude Projects with a project instruction file, or put preferences in a file that loads at session start |
+| Model "forgets" your preferences every session | Use project knowledge with an instruction file, or put preferences in a file that loads at session start |
 | Output quality varies between sessions | Your constraints are living in conversation context, not in persistent files. Externalize them. |
-| You spend the first 10 minutes of every session re-establishing context | Build a CLAUDE.md with a current state section. Update it at the end of each session. |
+| You spend the first 10 minutes of every session re-establishing context | Build an AGENTS.md with a current state section. Update it at the end of each session. |
 | The model does not know where the project is | Add a status section to your workspace routing file. Three lines: what is done, what is in progress, what is next. |
 | You rediscover the same lessons repeatedly | Start a session log. Three bullets after each session: done, decided, next. |

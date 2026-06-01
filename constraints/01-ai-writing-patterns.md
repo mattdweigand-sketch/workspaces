@@ -34,7 +34,7 @@ Run your AI output through one of these before you decide the model is the probl
 
 ## Layer 2: Existing Skills and Tools
 
-The AI community has already built targeted solutions for common writing patterns. These work inside Claude Code, Cursor, or any environment that supports skills.
+The AI community has already built targeted solutions for common writing patterns. These work inside file-system-enabled AI coding tools or any environment that supports skills.
 
 **blader/humanizer** (github.com/blader/humanizer, 3,000+ stars)
 The most established writing cleanup skill. Based on Wikipedia's "Signs of AI writing" guide maintained by WikiProject AI Cleanup. Identifies and rewrites patterns like significance inflation ("marking a pivotal moment in the evolution of..."), AI vocabulary ("delve," "landscape," "leverage," "tapestry"), and hedging language ("It's worth noting that..."). Includes an audit pass after the first rewrite to catch patterns that survived.

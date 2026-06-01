@@ -31,10 +31,10 @@ If your CRM, ERP, or document management system maintains a register with upload
 **Deterministic dedup before AI dedup**
 Exact duplicates are a hashing problem, not a reasoning problem. Run a checksum or a file-comparison tool first. Reserve the model for the harder, genuinely probabilistic case: near-duplicates and version families where the content overlaps but the files are not identical (`model_v1`, `model_v2`, `model_final`). That is the 10% where reasoning earns its place.
 
-**Claude Projects and Cowork file inspection**
-In an environment with file-system access, the model can walk a folder tree, read metadata, and inspect contents to build an inventory directly. In an upload-based environment (Claude Projects, ChatGPT Projects), it can do the same against the documents in the workspace. Either way, the inspection produces artifacts you read, not a silent judgment it acts on.
+**Project knowledge and file inspection**
+In an environment with file-system access, the model can walk a folder tree, read metadata, and inspect contents to build an inventory directly. In an upload-based environment with project knowledge, it can do the same against the documents in the workspace. Either way, the inspection produces artifacts you read, not a silent judgment it acts on.
 
-**The CLAUDE.md and stage-contract pattern (Constraint 08)**
+**The AGENTS.md and stage-contract pattern (Constraint 08)**
 The inventory and its logs are reference material once built. They live alongside `_config`, get cited by every drafting stage, and survive the handoff. A claim cannot carry a `[S01]` citation unless an inventory assigned `S01` in the first place.
 
 ---

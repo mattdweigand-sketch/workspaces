@@ -29,8 +29,8 @@ The pattern: understand the work deeply through manual execution. Identify what 
 
 ## Layer 2: Existing Skills and Tools
 
-**Claude Projects for repeatable workflows**
-A Claude Project with well-structured knowledge sources is a scaling tool, not an automation tool. It does not run without you. It runs faster with you. Your constraints, references, and process documentation are loaded. You provide the judgment. The model handles the synthesis, drafting, and pattern matching. This is the difference between "the AI does my work" and "I do my work faster because the AI handles the parts that slow me down."
+**Project knowledge for repeatable workflows**
+An AI project with well-structured knowledge sources is a scaling tool, not an automation tool. It does not run without you. It runs faster with you. Your constraints, references, and process documentation are loaded. You provide the judgment. The model handles the synthesis, drafting, and pattern matching. This is the difference between "the AI does my work" and "I do my work faster because the AI handles the parts that slow me down."
 
 **n8n for the genuinely automatable parts** (n8n.io)
 Once you have identified which parts of your workflow are deterministic (see Constraint 06), n8n can automate those parts. Data moves from one system to another. Files get renamed and sorted. Notifications fire when a condition is met. These are the parts that should run without you because they do not require your judgment.

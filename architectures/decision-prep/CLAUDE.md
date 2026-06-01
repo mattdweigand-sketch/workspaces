@@ -1,12 +1,7 @@
-# Decision Prep
+# CLAUDE.md
 
-This workspace prepares a human to make a better decision.
+This file keeps Claude Code compatible with the shared `AGENTS.md` guidance.
 
-Start with `CONTEXT.md`, then load only the relevant stage file.
+`AGENTS.md` is canonical. Do not duplicate project instructions here.
 
-## Boundary
-
-- Platforms own records, approval state, and decision logs.
-- Deterministic tools own calculations and threshold checks.
-- This workspace owns framing: options, tradeoffs, risks, assumptions, precedent, and decision conditions.
-- The human decision-maker owns the final decision.
+@AGENTS.md

@@ -121,7 +121,7 @@ If none fit, do not invent a seventh architecture casually. Explain the gap and 
 4. Load only the constraints named in the Context Matrix.
 5. Copy `architectures/<architecture>/` into `workspaces/<name>/`.
 6. If the workflow produces or reviews artifacts, ask whether to attach `modules/artifact-trust-layer/`.
-7. Customize `CLAUDE.md`, `CONTEXT.md`, stage contracts, and `_config/` from the answers.
+7. Customize `AGENTS.md`, `CONTEXT.md`, stage contracts, and `_config/` from the answers.
 8. If a module is attached, follow its attachment guide. Reference module files in place by default, copy only templates that need customization, and name module output locations in the relevant stage contracts.
 9. Populate `_config/before-you-trust-this.md` with every unresolved confirmation.
 10. Run one stage against live or sample input when available.

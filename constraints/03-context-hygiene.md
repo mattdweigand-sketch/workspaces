@@ -27,8 +27,8 @@ The Unix philosophy applies here too. Doug McIlroy (1978) described it: write pr
 
 ## Layer 2: Existing Skills and Tools
 
-**Claude Projects with scoped knowledge sources**
-If you are working in Claude Projects, the knowledge sources you attach scope what the model sees. Attach only the sources relevant to the project. If you have a contract, a pricing model, and a market study, but the task is drafting a renewal notice, you need the contract terms and the renewal schedule. The market study can stay out until you need it. Fewer sources means less noise.
+**Scoped project knowledge sources**
+If your AI environment supports project knowledge, the sources you attach scope what the model sees. Attach only the sources relevant to the project. If you have a contract, a pricing model, and a market study, but the task is drafting a renewal notice, you need the contract terms and the renewal schedule. The market study can stay out until you need it. Fewer sources means less noise.
 
 **mem0 MCP server** (github.com/mem0ai/mem0)
 A persistent memory layer that stores and retrieves contextual data, facts, and relationships across sessions. Instead of pasting everything into every conversation, mem0 maintains a structured memory that the model can query. This keeps the active context window lean while making historical context available on demand.
@@ -36,10 +36,10 @@ A persistent memory layer that stores and retrieves contextual data, facts, and 
 **Conversation branching**
 Most interfaces support starting a new conversation. This is an underused tool. When your current conversation has accumulated 20+ exchanges of context, and you are starting a new subtask, open a new conversation. Paste in only what the new task needs. A fresh context window with targeted information outperforms a long conversation window with accumulated noise every time.
 
-**The CLAUDE.md pattern**
+**The AGENTS.md pattern**
 A short file (under 800 tokens) that loads at the start of every session. It tells the model where it is, what the workspace contains, and where to find things. This is Layer 0 in the ICM hierarchy. It does not contain detailed instructions. It contains a map. The model reads the map, then navigates to the specific files it needs for the current task, instead of having everything loaded from the start.
 
-For fillable templates of CLAUDE.md and per-stage CONTEXT.md, see Constraint 08 (Handoff Readiness). It gives the section-by-section structure of both files, ready to copy.
+For fillable templates of AGENTS.md and per-stage CONTEXT.md, see Constraint 08 (Handoff Readiness). It gives the section-by-section structure of both files, ready to copy.
 
 ---
 
@@ -48,7 +48,7 @@ For fillable templates of CLAUDE.md and per-stage CONTEXT.md, see Constraint 08 
 The Interpreted Context Methodology (ICM) organizes context into five layers, and the key insight is that not every layer loads at the same time.
 
 ```
-L0: CLAUDE.md       "Where am I?"       Always loaded. ~800 tokens.
+L0: AGENTS.md       "Where am I?"       Always loaded. ~800 tokens.
 L1: CONTEXT.md      "Where do I go?"    Read on entry. ~300 tokens.
 L2: Stage contract  "What do I do?"     Read per task. ~200-500 tokens.
 L3: Reference       "What rules apply?" Loaded selectively. Varies.
@@ -68,13 +68,13 @@ L4 is the product. Output from previous stages, user-provided source material, a
 
 1. **Count your layers.** If you are loading L0, L1, L2, three L3 files, and two L4 files all at once, you are probably loading too much. For most tasks, L0 + L2 + one or two L3 files + one L4 file is sufficient.
 
-2. **Remove before you add.** Before pasting new context into a conversation, ask whether any of the existing context is no longer relevant. Active context management means constantly removing and putting back in from the CLAUDE.md as the task changes. Your context window is not an archive. It is a workbench. Clear it between tasks.
+2. **Remove before you add.** Before pasting new context into a conversation, ask whether any of the existing context is no longer relevant. Active context management means constantly removing and putting back in from the AGENTS.md as the task changes. Your context window is not an archive. It is a workbench. Clear it between tasks.
 
 3. **Separate reference from source.** If you have the team's voice guide and a data pack, and the task is to write a monthly report from the data pack in the team's voice, make sure the model knows which is which. Label them. "REFERENCE (do not transform, use as constraints):" and "SOURCE (transform this into the output):" are ugly but effective headers.
 
 4. **Front-load the important stuff.** In practice, models tend to use information at the beginning and end of a long context more reliably than information buried in the middle. This is an observed tendency, not a hard rule, and it varies by model. Put your most important constraints and instructions at the beginning. Put your source material after that. If you must include a lot of context, put a brief summary of key constraints at the end as a reminder.
 
-5. **Use the filesystem as external memory.** Not everything needs to be in the context window. Files on disk are context that is available but not loaded. The model (in Claude Code, Cowork, or Cursor) can read a file when it needs it. Keeping reference material in files and loading it selectively is cheaper and more reliable than pasting it all into the conversation.
+5. **Use the filesystem as external memory.** Not everything needs to be in the context window. Files on disk are context that is available but not loaded. A file-system-enabled AI tool can read a file when it needs it. Keeping reference material in files and loading it selectively is cheaper and more reliable than pasting it all into the conversation.
 
 **The token budget heuristic:**
 
@@ -94,7 +94,7 @@ If your reference material is consuming 60% of the window, it is too much. Eithe
 Count them. If the answer is more than 5, you are probably loading context that the current task does not need. For each file, ask: does THIS task need THIS file? If the answer is no, do not load it.
 
 **2. Which of your reference materials change between runs, and which stay the same?**
-Material that stays the same across runs (brand guide, style constraints, process documentation) is L3. Material that changes each run (source content, previous stage output, client brief) is L4. If you are re-loading stable reference material from scratch every session instead of keeping it in a persistent location (Claude Project knowledge, files on disk), you are wasting tokens on context setup.
+Material that stays the same across runs (brand guide, style constraints, process documentation) is L3. Material that changes each run (source content, previous stage output, client brief) is L4. If you are re-loading stable reference material from scratch every session instead of keeping it in a persistent location (project knowledge, files on disk), you are wasting tokens on context setup.
 
 **3. At what point in a conversation does quality start to degrade?**
 Pay attention to this. If it happens around message 10-15, your context is accumulating noise. Try starting a fresh conversation at that point with only the information the next task needs. If quality is fine until you paste in a large document, the document is probably too large. Summarize it or extract the relevant sections before including it.
@@ -108,5 +108,5 @@ Pay attention to this. If it happens around message 10-15, your context is accum
 | Model contradicts earlier instructions | Important constraints have drifted to the middle of a long context. Restate them or start fresh. |
 | Quality degrades over a long conversation | Open a new conversation. Paste in only what the next task needs. |
 | Model confuses reference material with source content | Label them explicitly: REFERENCE vs. SOURCE. Ugly but effective. |
-| Everything loads every time | Build a CLAUDE.md that maps the workspace. Let the model navigate to files instead of loading everything upfront. |
+| Everything loads every time | Build an AGENTS.md that maps the workspace. Let the model navigate to files instead of loading everything upfront. |
 | You are not sure what is in your context | That is the problem. Map it. Know what is loaded and why. |

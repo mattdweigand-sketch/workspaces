@@ -27,8 +27,8 @@ Software engineering solved this decades ago, and then solved it again, and agai
 
 ## Layer 2: Existing Skills and Tools
 
-**Claude Projects as shared workspaces**
-A Claude Project can be shared across team members (on Team and Enterprise plans). The project instructions and knowledge sources create a shared context. New team members start conversations within the project and inherit the full context without needing a verbal walkthrough.
+**Shared AI project spaces**
+Some AI tools let teams share project instructions and knowledge sources. Those shared spaces create reusable context. New team members start conversations within the project and inherit the core context without needing a verbal walkthrough.
 
 **GitHub for workspace distribution**
 If your workspace is a folder structure with markdown files (which ICM workspaces are), GitHub is the natural distribution mechanism. Clone the repository. Run the workflow. Submit changes via pull requests. The repository history shows how the workspace has evolved over time.
@@ -36,7 +36,7 @@ If your workspace is a folder structure with markdown files (which ICM workspace
 For non-technical teams, GitHub's web interface lets people browse files, read documentation, and download the workspace as a zip file without touching the command line.
 
 **Skill files as portable process**
-A well-written skill file is inherently portable. It contains the instructions, the references, and the output specification in one place. Handing someone a skill file is handing them the process in a format that Claude (or any model that reads markdown) can execute.
+A well-written skill file is inherently portable. It contains the instructions, the references, and the output specification in one place. Handing someone a skill file is handing them the process in a format any model that reads markdown can execute.
 
 **Obsidian shared vaults**
 Obsidian supports shared vaults via Obsidian Sync, Git, or shared drives. If your team uses Obsidian for knowledge management, a shared vault containing your workspace documentation becomes the handoff mechanism. Each note links to related notes, creating a navigable knowledge graph.
@@ -51,7 +51,7 @@ In ICM, the structure IS the documentation. A well-built workspace can be handed
 
 ```
 workspace/
-  CLAUDE.md               # "Where am I?" - Entry point. Map of the workspace.
+  AGENTS.md               # "Where am I?" - Entry point. Map of the workspace.
   CONTEXT.md              # "Where do I go?" - Workflow overview. Stage connections.
   01_intake/
     CONTEXT.md            # "What do I do?" - Stage contract for intake.
@@ -66,7 +66,7 @@ workspace/
   _references/            # Reusable references for stage work.
 ```
 
-Someone opening this folder for the first time can read CLAUDE.md, understand the workspace, read CONTEXT.md, understand the workflow, navigate to any stage, read its CONTEXT.md, and understand what that stage does. No external documentation needed. The structure is the documentation.
+Someone opening this folder for the first time can read AGENTS.md, understand the workspace, read CONTEXT.md, understand the workflow, navigate to any stage, read its CONTEXT.md, and understand what that stage does. No external documentation needed. The structure is the documentation.
 
 **The numbering matters.** Numbered prefixes (01_, 02_, 03_) encode execution order. Someone browsing the folder sees the workflow sequence without reading a single file. Alphabetical sorting in any file manager displays them in the correct order.
 
@@ -74,9 +74,9 @@ Someone opening this folder for the first time can read CLAUDE.md, understand th
 
 **Handoff points are explicit.** Each stage has an output/ directory. The output of stage 01 is the input for stage 02. This makes the data flow visible. If you want to review or edit the handoff between stages, you know exactly where to look.
 
-**What goes in CLAUDE.md for handoff:**
+**What goes in AGENTS.md for handoff:**
 
-A good CLAUDE.md for a handed-off workspace includes:
+A good AGENTS.md for a handed-off workspace includes:
 
 ```
 # [Workspace Name]
@@ -105,7 +105,7 @@ This file is under 800 tokens. A model reads it in one pass. A human reads it in
 
 Before handing off a workspace, verify:
 
-1. **Can someone open the folder and know what it is?** CLAUDE.md exists and answers "what is this?" in the first paragraph.
+1. **Can someone open the folder and know what it is?** AGENTS.md exists and answers "what is this?" in the first paragraph.
 
 2. **Can someone see the workflow?** Stages are numbered. CONTEXT.md explains the flow. The connection between stages (one stage's output being the next stage's input) is clear.
 
@@ -113,7 +113,7 @@ Before handing off a workspace, verify:
 
 4. **Can someone change a reference without breaking things?** Reference material (_config) is separate from stage logic. Updating the pricing standards does not require editing stage contracts.
 
-5. **Can someone understand why things are this way?** Key decisions are logged in CLAUDE.md or in a decisions log. The "why" is as important as the "what."
+5. **Can someone understand why things are this way?** Key decisions are logged in AGENTS.md or in a decisions log. The "why" is as important as the "what."
 
 If the answer to any of these is no, the workspace is not ready for handoff. Fix the weakest point first.
 
@@ -147,13 +147,13 @@ Keep it to one file. The brief is a summary that points back to the upstream wor
 ## Tuning Questions
 
 **1. Could someone open your workspace cold and know where to start?**
-Try it. Ask someone unfamiliar with the project to open the folder and tell you what they think it does. If they can figure it out in under two minutes, your structure is self-documenting. If they cannot, your CLAUDE.md is either missing, incomplete, or unclear.
+Try it. Ask someone unfamiliar with the project to open the folder and tell you what they think it does. If they can figure it out in under two minutes, your structure is self-documenting. If they cannot, your AGENTS.md is either missing, incomplete, or unclear.
 
 **2. What questions would someone ask you in the first hour of using this workspace?**
-Write those questions down. Answer them in the CLAUDE.md or in the relevant stage contract. Every question someone would need to ask you is documentation that is missing.
+Write those questions down. Answer them in the AGENTS.md or in the relevant stage contract. Every question someone would need to ask you is documentation that is missing.
 
 **3. What would break if you changed one reference file?**
-If changing the pricing standards requires updating three stage contracts and the CLAUDE.md, your workspace has tight coupling. Reference material should be referenced, not duplicated. Change the reference in one place and every stage that references it picks up the change.
+If changing the pricing standards requires updating three stage contracts and the AGENTS.md, your workspace has tight coupling. Reference material should be referenced, not duplicated. Change the reference in one place and every stage that references it picks up the change.
 
 ---
 
@@ -161,7 +161,7 @@ If changing the pricing standards requires updating three stage contracts and th
 
 | If this is your situation | Start here |
 |---|---|
-| Nobody else can use your workspace | Write a CLAUDE.md that answers: what is this, how do I use it, and why is it structured this way. |
+| Nobody else can use your workspace | Write an AGENTS.md that answers: what is this, how do I use it, and why is it structured this way. |
 | People keep asking you the same questions about the process | Turn those questions into documentation in the relevant stage contracts. |
 | Handing off a project takes a long meeting | The meeting is the documentation. Record it, or better, put that content in files. |
 | Your workspace works for you but looks chaotic to others | Apply consistent naming (numbered stages, underscore for support folders, descriptive filenames) and add one CONTEXT.md per stage. |

@@ -1,12 +1,7 @@
-# Evidence Review
+# CLAUDE.md
 
-This workspace inspects source material before the business relies on it.
+This file keeps Claude Code compatible with the shared `AGENTS.md` guidance.
 
-Start with `CONTEXT.md`, then load only the stage file for the current step.
+`AGENTS.md` is canonical. Do not duplicate project instructions here.
 
-## Boundary
-
-- Document systems own storage, permissions, version history, and audit.
-- Deterministic tools own exact duplicate checks and file metadata extraction.
-- This workspace owns source interpretation: authority, support, conflicts, gaps, and questions.
-- A human resolves conflicts and approves claims.
+@AGENTS.md

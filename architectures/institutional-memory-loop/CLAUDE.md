@@ -1,12 +1,7 @@
-# Institutional Memory Loop
+# CLAUDE.md
 
-This workspace captures validated lessons and applies them to future work.
+This file keeps Claude Code compatible with the shared `AGENTS.md` guidance.
 
-Start with `CONTEXT.md`, then load only the current stage file.
+`AGENTS.md` is canonical. Do not duplicate project instructions here.
 
-## Boundary
-
-- Source systems own what happened.
-- This workspace owns interpretation, validation, pattern capture, and reuse.
-- A database can store memory artifacts, but it cannot create, validate, interpret, or apply judgment.
-- A human validates causal claims before they enter the store.
+@AGENTS.md
