@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 import re
 
+from workspace_quality import run_quality_checks
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SHARED = ROOT / "_shared-config"
@@ -182,13 +184,16 @@ def registry_report():
 
 
 def doctor_report():
+    registry = registry_report()
+    quality = run_quality_checks(ROOT, TOOLKIT, parse_registry_rows())
     checks = {
         "status": status_value(),
         "placeholders": placeholder_hits(),
         "setup_progress_exists": PROGRESS.exists(),
         "workspaces_exists": (ROOT / "workspaces").exists(),
         "bootstrap_agents": is_bootstrap_agents(),
-        "registry": registry_report(),
+        "registry": registry,
+        "quality": quality,
     }
     checks["issues"] = []
     if checks["placeholders"]:
@@ -201,6 +206,8 @@ def doctor_report():
         checks["issues"].append("bootstrap_agents_map")
     if checks["registry"]["missing_registry_references"]:
         checks["issues"].append("registry_mismatch")
+    if checks["quality"]["error_count"]:
+        checks["issues"].append("quality_checks_failed")
     return checks
 
 
@@ -225,6 +232,14 @@ def text_doctor(data):
         f"{registry['builder_rows']} builders, "
         f"{registry['constraint_files']} constraints"
     )
+    quality = data.get("quality")
+    if quality:
+        lines.append(
+            "quality: "
+            f"{quality['status']}, "
+            f"{quality['error_count']} errors, "
+            f"{quality['warning_count']} warnings"
+        )
     return "\n".join(lines)
 
 

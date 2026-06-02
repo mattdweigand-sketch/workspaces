@@ -66,7 +66,8 @@ Load only what the selected architecture needs.
 When the user says `Run setup`, `add a workflow`, or `build a <workflow>`, do this:
 
 1. Run `python3 scripts/setup_state.py status`.
-2. If needed, run `python3 scripts/setup_state.py doctor --json`.
+2. If needed, run `python3 scripts/setup_state.py doctor --json`. Doctor reports setup state,
+   registry integrity, and deterministic quality checks.
 3. Follow the status:
    - `not_started`: run `python3 scripts/setup_state.py init-session`, then run Organization Orientation, Value Triage, and Build Sequence.
    - `in_progress`: read `_shared-config/setup-session.json` and resume from the recorded phase, step, and question.
@@ -163,6 +164,7 @@ Report each item as pass or open:
 - [ ] At least one stage contract customized.
 - [ ] A sample or live input can run through the first stage.
 - [ ] No platform-native action is delegated to AI.
+- [ ] `python3 scripts/setup_state.py doctor --json` has no quality check errors.
 
 Use **MVP ready** when the workspace is configured and only visible confirmations remain. Use **Operating ready** when a live run has completed.
 
